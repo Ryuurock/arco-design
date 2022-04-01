@@ -1,4 +1,4 @@
-import React, { ReactElement, useContext, useRef } from 'react';
+import React, { ReactElement, useContext, useMemo, useRef } from 'react';
 import Trigger, { EventsByTriggerNeed } from '../Trigger';
 import Button from './button';
 import { ConfigContext } from '../ConfigProvider';
@@ -8,6 +8,9 @@ import omit from '../_util/omit';
 import pick from '../_util/pick';
 import { DropdownProps } from './interface';
 import useMergeProps from '../_util/hooks/useMergeProps';
+
+// Generate DOM id for instance
+let globalDropdownIndex = 0;
 
 const defaultProps: DropdownProps = {
   position: 'bl',
@@ -39,6 +42,13 @@ function Dropdown(baseProps: DropdownProps, _) {
     value: props.popupVisible,
   });
 
+  // Unique ID of this instance
+  const instancePopupID = useMemo<string>(() => {
+    const id = `${prefixCls}-popup-${globalDropdownIndex}`;
+    globalDropdownIndex++;
+    return id;
+  }, []);
+
   const getPopupContent = () => {
     return React.Children.only(droplist || <span />) as React.ReactElement;
   };
@@ -59,6 +69,7 @@ function Dropdown(baseProps: DropdownProps, _) {
     const content = getPopupContent();
     return content && content.props.isMenu
       ? React.cloneElement(content as ReactElement, {
+          id: instancePopupID,
           prefixCls: `${prefixCls}-menu`,
           inDropdown: true,
           selectable: false,
@@ -120,6 +131,10 @@ function Dropdown(baseProps: DropdownProps, _) {
               },
               children.props.className
             ),
+            role: 'combobox',
+            'aria-haspopup': true,
+            'aria-controls': instancePopupID,
+            'aria-expanded': popupVisible,
           })
         : children}
     </Trigger>

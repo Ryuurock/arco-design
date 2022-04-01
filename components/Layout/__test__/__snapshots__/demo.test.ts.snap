@@ -579,7 +579,11 @@ exports[`renders Layout/demo/breakpoint.md correctly 1`] = `
             class="arco-menu-overflow-wrap"
           >
             <div
+              aria-controls="arco-dropdown-popup-0"
+              aria-expanded="false"
+              aria-haspopup="true"
               class="arco-menu-pop arco-menu-pop-header arco-menu-overflow-sub-menu-mirror"
+              role="combobox"
             >
               <span>
                 ···
@@ -645,7 +649,11 @@ exports[`renders Layout/demo/breakpoint.md correctly 1`] = `
               />
             </div>
             <div
+              aria-controls="arco-dropdown-popup-1"
+              aria-expanded="false"
+              aria-haspopup="true"
               class="arco-menu-pop arco-menu-pop-header"
+              role="combobox"
             >
               <span>
                 <svg
@@ -682,7 +690,11 @@ exports[`renders Layout/demo/breakpoint.md correctly 1`] = `
               </span>
             </div>
             <div
+              aria-controls="arco-dropdown-popup-2"
+              aria-expanded="false"
+              aria-haspopup="true"
               class="arco-menu-pop arco-menu-pop-header"
+              role="combobox"
             >
               <span>
                 <svg

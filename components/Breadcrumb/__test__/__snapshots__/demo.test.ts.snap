@@ -453,7 +453,11 @@ exports[`renders Breadcrumb/demo/with-dropdown.md correctly 1`] = `
       </svg>
     </span>
     <div
+      aria-controls="arco-dropdown-popup-0"
+      aria-expanded="false"
+      aria-haspopup="true"
       class="arco-breadcrumb-item arco-breadcrumb-item-with-dropdown"
+      role="combobox"
     >
       Channel
       <span
@@ -529,7 +533,11 @@ exports[`renders Breadcrumb/demo/with-dropdown.md correctly 1`] = `
       </svg>
     </span>
     <div
+      aria-controls="arco-dropdown-popup-1"
+      aria-expanded="false"
+      aria-haspopup="true"
       class="arco-breadcrumb-item arco-breadcrumb-item-with-dropdown"
+      role="combobox"
     >
       <a
         href="#/Channel"

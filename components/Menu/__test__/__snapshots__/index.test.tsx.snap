@@ -46,7 +46,11 @@ exports[`Menu overflowItems should be pack up 1`] = `
       class="arco-menu-overflow-wrap"
     >
       <div
+        aria-controls="arco-dropdown-popup-6"
+        aria-expanded="false"
+        aria-haspopup="true"
         class="arco-menu-pop arco-menu-pop-header arco-menu-overflow-sub-menu-mirror"
+        role="combobox"
       >
         <span>
           ···
@@ -85,7 +89,11 @@ exports[`Menu overflowItems should be pack up 1`] = `
         模块
       </div>
       <div
+        aria-controls="arco-dropdown-popup-7"
+        aria-expanded="false"
+        aria-haspopup="true"
         class="arco-menu-pop arco-menu-pop-header arco-menu-selected arco-menu-overflow-hidden-menu-item"
+        role="combobox"
       >
         <span>
           组件
@@ -112,7 +120,11 @@ exports[`Menu overflowItems should be pack up 1`] = `
         />
       </div>
       <div
+        aria-controls="arco-dropdown-popup-8"
+        aria-expanded="false"
+        aria-haspopup="true"
         class="arco-menu-pop arco-menu-pop-header arco-menu-overflow-hidden-menu-item"
+        role="combobox"
       >
         <span>
           布局组件
